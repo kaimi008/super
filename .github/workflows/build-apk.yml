@@ -36,11 +36,10 @@ jobs:
 
       - name: 运行 Buildozer
         run: |
-             pip install packaging setuptools wheel --upgrade
-             rm -rf .buildozer/android/platform/build-*
-             rm -rf .buildozer/android/packages
-             buildozer -v android debug
-
+            # 升级宿主 pip 和构建工具
+            python -m pip install --upgrade pip setuptools wheel
+            pip install packaging
+     
       - name: 上传 APK 产物
         uses: actions/upload-artifact@v4
         with:
