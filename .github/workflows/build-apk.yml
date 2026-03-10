@@ -22,7 +22,7 @@ jobs:
         run: |
            # 1. 更新软件源并安装基础构建工具
              sudo apt-get update
-             sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev dpkg-dev libgtk-3-dev libgl1-mesa-dev libgles2-mesa-dev
+             sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev cmake libffi-dev libssl-dev dpkg-dev libgtk-3-dev libgl1-mesa-dev libgles2-mesa-dev libstdc++6 libbsd-dev
 
              # 2. 升级 pip 防止版本过旧
              python -m pip install --upgrade pip
