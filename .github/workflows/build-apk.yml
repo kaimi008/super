@@ -36,7 +36,9 @@ jobs:
 
       - name: 运行 Buildozer
         run: |
-             pip install packaging
+             pip install packaging setuptools wheel --upgrade
+             rm -rf .buildozer/android/platform/build-*
+             rm -rf .buildozer/android/packages
              buildozer -v android debug
 
       - name: 上传 APK 产物
